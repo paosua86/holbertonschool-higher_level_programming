@@ -8,7 +8,7 @@ An introductory project on:
 - How to check your code with `PEP 8`
 ## Requirements
 - python3 (version 3.8.5)
-- pep8 1.7
+- pep8  2.7.
 ## File Descriptions
 ### Mandatory
 **[0-run](0-run)** - Write a Shell script that runs a Python script. The Python file name will be saved in the environment variable `$PYFILE`.

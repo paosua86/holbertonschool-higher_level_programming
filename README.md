@@ -30,7 +30,7 @@ and more!
 * Ubuntu 20.04 LTS
 * Python 3.8.5
 * pip3 
-* pep8 
+* pep8 2.7.
 * MySQL 
 * MySQLdb 
 * SQLAlchemy 
