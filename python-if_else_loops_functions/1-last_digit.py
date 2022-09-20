@@ -12,3 +12,4 @@ elif numberLast == 0:
     print(f"{number} is {numberLast} and is 0")
 else:
     print(f"{number} is {numberLast} and is less than 6 and not 0")
+exit(0)
