@@ -7,7 +7,7 @@ else:
     numberLast = number % -10
 print("Last digit of", end=" ")
 if numberLast > 5:
-    print(f"{number} is {numberLast} and is grater than 5" end=" ")
+    print(f"{number} is {numberLast} and is grater than 5")
 elif numberLast == 0:
     print(f"{number} is {numberLast} and is 0")
 else:
