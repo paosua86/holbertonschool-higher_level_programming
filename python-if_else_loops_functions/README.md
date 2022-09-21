@@ -17,8 +17,8 @@ An introductory project on:
 - Arithmetic operators and how to use them
 
 ## Requirements
-- Python 3.4
-- pep8 1.7
+- python3 (version 3.8.5)
+- pep8  2.7.
 ## File Descriptions
 ### Mandatory
 **[0-positive_or_negative.py](./0-positive_or_negative.py)** - This program will assign a random signed number to the variable `number` each time it is executed. Complete the [source code](https://intranet.hbtn.io/rltoken/2S3G4vOnRrWymCjKYd6Wew) in order to print whether the number stored in the variable `number` is positive or negative.
