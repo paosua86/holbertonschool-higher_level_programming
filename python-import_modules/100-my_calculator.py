@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 if __name__ == "__main__":
     from sys import argv
     if len(argv) != 4:
@@ -7,7 +7,7 @@ if __name__ == "__main__":
     a = int(argv[1])
     b = int(argv[3])
     op = ["+", "-", "*", "/"]
-    from 1-calculator import add, sub, mul, div
+    from calculator_1 import add, sub, mul, div
     funcs = [add, sub, mul, div]
     for i, s in enumerate(op):
         if argv[2] == s:
