@@ -11,8 +11,8 @@ An introductory project on:
 - What is a lambda function
 - What are map and reduce
 ## Requirements
-- Python 3.4
-- pep8 1.7
+- python3 (version 3.8.5)
+- pep8  2.7.
 ## File Descriptions
 ### Mandatory
 **[0-square_matrix_simple.py](0-square_matrix_simple.py)** - Write a function that computes the square value of all integers of a matrix.
