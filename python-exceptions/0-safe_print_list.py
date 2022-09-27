@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-from os import lseek
-
-
 def safe_print_list(my_list=[], x=0):
     a = 0
     for i in range(x):
