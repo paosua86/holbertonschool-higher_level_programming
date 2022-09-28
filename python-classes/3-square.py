@@ -3,6 +3,9 @@
 
 
 class Square:
+    """square
+    Attibutes: __size (int): square side size
+    """
     def __init__(self, size=0):
         """initializes class square
         Args: size (int): square side size
