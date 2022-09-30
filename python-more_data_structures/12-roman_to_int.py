@@ -6,10 +6,9 @@ def roman_to_int(roman_string):
                       'D': 500, 'M': 1000}
     r = 0
     for i, c in enumerate(roman_string):
-        if (i+1) == len(roman_string) or /
-        list_roman_int[c] >= list_roman_int[roman_string[i+1]]:
-
+        if (i+1) == len(roman_string) or \
+            list_roman_int[c] >= list_roman_int[roman_string[i+1]]:
             r += list_roman_int[c]
         else:
             r -= list_roman_int[c]
-    return r
+        return r
