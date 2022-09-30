@@ -9,7 +9,6 @@ class Square:
         __position (tuple): position of the square in 2D space
     """
     def __init__(self, size=0, position=(0, 0)):
-        
         self.size = size
         self.position = position
 
@@ -22,7 +21,6 @@ class Square:
 
     @size.setter
     def size(self, value):
-        
         if type(value) is not int:
             raise TypeError("size must be an integer")
         else:
@@ -39,7 +37,7 @@ class Square:
             print()
         for j in range(self.__size):
             print("".join([" " for k in range(self.__position[0])]), end="")
-            print("".join(["#" for l in range(self.__size)]))
+            print("".join(["#" for le in range(self.__size)]))
 
     @property
     def position(self):
