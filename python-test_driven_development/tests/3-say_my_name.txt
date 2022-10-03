@@ -6,18 +6,24 @@
 Using ``say_my_name()``
 
 Importing the function from the module:
-	>>> say_my_name = __import__("0-say_my_name").say_my_name
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
 
 String cases::
 
     >>> say_my_name("John", "Smith")
-    John Smith
+    My name is John Smith
 
     >>> say_my_name(1000, "Ubilluz")
-    1015
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
 
     >>> say_my_name("Paola", 1000)
-    10066
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+    
+
 
 None cases:
 
@@ -25,25 +31,25 @@ None cases:
     ...     say_my_name(1000, "Ubilluz")
     ... except Exception as e:
     ...     print(e)
-    a must be an integer
+    first_name must be a string
 
     >>> try:
     ...     say_my_name("Paola", 1000)
     ... except Exception as e:
     ...     print(e)
-    b must be an integer
+    last_name must be a string
 
     >>> try:
     ...     say_my_name(None)
     ... except Exception as e:
     ...     print(e)
-    a must be an integer
+    first_name must be a string
 
-Missing two arguments:
+Missing arguments:
     >>> say_my_name("Bob")
-    Bob
+    My name is Bob 
 
     >>> say_my_name()
     Traceback (most recent call last):
     ...
-    TypeError: say_my_name() missing 1 required positional argument: 'a'
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
