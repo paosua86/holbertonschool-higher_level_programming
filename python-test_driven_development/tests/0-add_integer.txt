@@ -17,7 +17,7 @@ Positive test cases:
     1015
 
     >>> add_integer(10051.65, 15)
-    10067
+    10066
 
 Negative test cases:
 
@@ -28,7 +28,7 @@ Negative test cases:
     900
 
     >>> add_integer(-54.6, -66.2)
-    -121
+    -120
 
 String cases:
 
