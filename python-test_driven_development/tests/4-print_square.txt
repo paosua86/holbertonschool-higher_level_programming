@@ -33,12 +33,8 @@ Negative test cases:
     >>> print_square(-5)
     Traceback (most recent call last):
     ...
-    ValueError: size must be >= 0
+    TypeError: size must be >= 0
 
-    >>> print_square(-54.6)
-    Traceback (most recent call last):
-    ...
-    ValueError: size must be >= 0
 
 String cases:
 
@@ -46,7 +42,7 @@ String cases:
     ...     print_square("Holberton")
     ... except Exception as e:
     ...     print(e)
-    '<' not supported between instances of 'str' and 'int'
+    size must be an integer
 
     
 	Traceback (most recent call last):
