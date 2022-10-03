@@ -1,0 +1,71 @@
+============================
+``0-add_integer`` module
+============================
+
+
+Using ``add_integer()``
+
+Importing the function from the module:
+	>>> add_integer = __import__("0-add_integer").add_integer
+
+Positive test cases:
+
+    >>> add_integer(1, 0)
+    1
+
+    >>> add_integer(1000, 15)
+    1015
+
+    >>> add_integer(10051.65, 15)
+    10067
+
+Negative test cases:
+
+    >>> add_integer(-5, 5)
+    0
+
+    >>> add_integer(958, -58)
+    900
+
+    >>> add_integer(-54.6, -66.2)
+    -121
+
+String cases:
+
+    >>> try:
+    ...     add_integer("Holberton", 5)
+    ... except Exception as e:
+    ...     print(e)
+    a must be an integer
+
+    >>> try:
+    ...     add_integer(-5, "Holberton")
+    ... except Exception as e:
+    ...     print(e)
+    b must be an integer
+
+    >>> try:
+    ...     add_integer("Holberton", "School")
+    ... except Exception as e:
+    ...     print(e)
+    a must be an integer
+
+None cases:
+
+    >>> try:
+    ...     add_integer(None, "School")
+    ... except Exception as e:
+    ...     print(e)
+    a must be an integer
+
+    >>> try:
+    ...     add_integer(3, None)
+    ... except Exception as e:
+    ...     print(e)
+    b must be an integer
+
+    >>> try:
+    ...     add_integer(None)
+    ... except Exception as e:
+    ...     print(e)
+    a must be an integer
