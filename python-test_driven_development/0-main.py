@@ -5,7 +5,7 @@ print(add_integer(1, 2))
 print(add_integer(100, -2))
 print(add_integer(2,5))
 print(add_integer(100.3, -2))
-print(add_integer(3, None))
+print(add_integer())
 try:
     print(add_integer(4, "School"))
 except Exception as e:
