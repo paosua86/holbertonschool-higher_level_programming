@@ -42,3 +42,19 @@ zero test cases:
     Traceback (most recent call last):
     ...
     ZeroDivisionError: division by zero
+
+
+non int test cases:
+
+    >>> matrix = [[3, "9"], [12, 3]]
+    >>> matrix_divided(matrix, 2) 
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+
+
+    >>> matrix = [[3, "9"], [12, 3]]
+    >>> matrix_divided(matrix, "2")) 
+    Traceback (most recent call last):
+    ...
+    matrix must be a matrix (list of lists) of integers/floats div must be a number
