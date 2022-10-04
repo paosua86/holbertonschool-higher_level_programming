@@ -43,6 +43,14 @@ zero test cases:
     ...
     ZeroDivisionError: division by zero
 
+zero test cases:
+
+    >>> matrix = [[3, 9], [12, 15]]
+    >>> matrix_divided(matrix, 0) 
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+
 
 non int test cases:
 
@@ -52,9 +60,31 @@ non int test cases:
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-
-    >>> matrix = [[3, "9"], [12, 3]]
-    >>> matrix_divided(matrix, "2")
+list of lists of integers but not rectangular test case:
+    
+    >>> matrix = [[3], [12, 3]]
+    >>> matrix_divided(matrix, 2)
     Traceback (most recent call last):
     ...
-    TypeError: div must be a number
+    TypeError: Each row of the matrix must have the same size
+
+list of lists of integers / div= float(inf) test case:
+    >>> matrix = [[3, 2], [12, 3]]
+    >>> matrix_divided(matrix, float('inf'))
+    [[0.0, 0.0], [0.0, 0.0]]
+
+missing one argument test case:
+    >>> matrix = [[3, 3], [12, 3]]
+    >>> matrix_divided(matrix,)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+
+missing two arguments test case:
+
+    >>> matrix = []
+    >>> matrix_divided(matrix,)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
