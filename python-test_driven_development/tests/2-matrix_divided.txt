@@ -50,11 +50,11 @@ non int test cases:
     >>> matrix_divided(matrix, 2) 
     Traceback (most recent call last):
     ...
-    ZeroDivisionError: division by zero
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 
     >>> matrix = [[3, "9"], [12, 3]]
-    >>> matrix_divided(matrix, "2")) 
+    >>> matrix_divided(matrix, "2")
     Traceback (most recent call last):
     ...
-    matrix must be a matrix (list of lists) of integers/floats div must be a number
+    TypeError: div must be a number
