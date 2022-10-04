@@ -1,5 +1,47 @@
-Write a function that prints My name is <first name> <last name>
+============================
+``2-matrix_divided`` module
+============================
 
-Prototype: def say_my_name(first_name, last_name=""):
-first_name and last_name must be strings otherwise, raise a TypeError exception with the message first_name must be a string or last_name must be a string
-You are not allowed to import any module
+
+Using ``matrix_divided()``
+
+Importing the function from the module:
+	>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Positive test cases:
+    matrix = [
+        [1, 3, 5]
+        [4, 4, 6]
+    ]
+    >>> matrix_divided(matrix, 3)
+    1
+
+
+Negative test cases:
+
+    matrix = [
+        [1, -3, 5]
+        [4, -4, 6]
+    ]
+    >>> matrix_divided(matrix, 2)
+    1
+
+one element test cases:
+
+    matrix = [
+        [3]
+    ]
+    >>> matrix_divided(matrix, 3)
+    1
+
+one element negative test cases:
+
+    matrix = [[3, 8], [12, 11]]
+    >>> matrix_divided(matrix, -3)
+    1
+
+zero test cases:
+
+    matrix = [[3, 9], [12, 15]]
+    >>> matrix_divided(matrix, 0) 
+    1
