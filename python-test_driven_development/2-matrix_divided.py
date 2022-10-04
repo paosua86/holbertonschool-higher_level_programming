@@ -8,6 +8,7 @@ The module contains one function, matrix_divided(matrix, div)
 
 def matrix_divided(matrix, div):
     """divides all elements of a matrix by div"""
+    flo = "matrix must be a matrix (list of lists) of integers/floats"
     if div == 0:
         raise ZeroDivisionError("division by zero")
     if not isinstance(div, int) and not isinstance(div, float):
@@ -19,9 +20,7 @@ def matrix_divided(matrix, div):
         if isinstance(row, list) and row:
             for col in row:
                 if not isinstance(col, int) and not isinstance(col, float):
-                    raise TypeError(
-                        "matrix must be a matrix\
-                            (list of lists) of integers/floats")
+                    raise TypeError(flo)
         else:
             raise TypeError(
                 "matrix must be a matrix (list of lists) of integers/floats")
