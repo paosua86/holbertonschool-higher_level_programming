@@ -88,3 +88,10 @@ missing two arguments test case:
     Traceback (most recent call last):
     ...
     TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+List of Lists of integers / div= string:
+    >>> matrix = [[3, 3], [12, 3]]
+    >>> matrix_divided(matrix, "hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
