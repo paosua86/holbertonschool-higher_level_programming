@@ -80,5 +80,5 @@ Checking too many arguments for area:
     ...
     Exception: area() is not implemented
 
-    >>> bg.integer_validator("width", True)
+    >>> bg.integer_validator("age",True)
 
