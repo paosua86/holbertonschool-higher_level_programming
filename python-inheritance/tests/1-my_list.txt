@@ -40,3 +40,8 @@ Checking for empty list:
 	 >>> l = MyList()
 	 >>> l.print_sorted()
 	 []
+
+Returns a new list:
+Checking that MyList inherits from list:
+	 >>> issubclass(MyList, list)
+	 True
