@@ -8,7 +8,7 @@ Using ``my_list``
 Importing the function from the module:
 	>>> MyList = __import__("1-my_list").MyList
 
-Positive test cases:
+Checking that appendng works:
 
     >>> l = MyList()
     >>> l.append(1)
@@ -18,7 +18,25 @@ Positive test cases:
     >>> l.append(5)
     >>> print(l)
     [1, 4, 2, 3, 5]
+    >>> l.print_sorted()
+    [1, 2, 3, 4, 5]
 
+    >>> m = MyList()
+    >>> m.append(1)
+    >>> m.append(-4)
+    >>> m.append(2)
+    >>> m.append(-3)
+    >>> m.append(5)
+    >>> print(m)
+    [1, -4, 2, -3, 5]
+    >>> m.print_sorted()
+    [-4, -3, 1, 2, 5]
 
+Checking for empty list:
+	 >>> l.print_sorted()
+	 [1, 2, 3, 4, 5]
 
-
+Checking for empty list:
+	 >>> l = MyList()
+	 >>> l.print_sorted()
+	 []
