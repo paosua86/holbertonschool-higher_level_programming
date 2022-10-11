@@ -19,9 +19,6 @@ Positive test cases:
     >>> print(l)
     [1, 4, 2, 3, 5]
 
-    >>> l.print_sorted()
-    >>> print(l)
-    [1, 2, 2, 4, 5]
 
 
 
