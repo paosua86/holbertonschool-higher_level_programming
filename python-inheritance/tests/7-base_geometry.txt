@@ -79,3 +79,6 @@ Checking too many arguments for area:
     Traceback (most recent call last):
     ...
     Exception: area() is not implemented
+
+    >>> bg.integer_validator("width", True)
+
