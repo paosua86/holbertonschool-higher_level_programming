@@ -14,6 +14,6 @@ Checking too many arguments for area:
     >>> bg.area(12)
     Traceback (most recent call last):
     ...
-    TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
+    TypeError: area() takes 1 positional argument but 2 were given
 
 
