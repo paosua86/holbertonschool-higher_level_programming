@@ -31,6 +31,8 @@ Checking that appendng works:
     [1, -4, 2, -3, 5]
     >>> m.print_sorted()
     [-4, -3, 1, 2, 5]
+    >>> m
+    [1, -4, 2, -3, 5]
 
 Checking for empty list:
 	 >>> l.print_sorted()
@@ -42,6 +44,7 @@ Checking for empty list:
 	 []
 
 Returns a new list:
-Checking that MyList inherits from list:
-	 >>> issubclass(MyList, list)
-	 True
+    >>> c = MyList()
+    >>> c.append(5)
+    >>> c
+    [5]
