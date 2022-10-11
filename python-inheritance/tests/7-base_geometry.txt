@@ -83,4 +83,4 @@ Checking too many arguments for area:
     >>> bg.integer_validator(“age”, True)
     Traceback (most recent call last):
     ...
-     SyntaxError: invalid character in identifier
+    SyntaxError: invalid character in identifier
