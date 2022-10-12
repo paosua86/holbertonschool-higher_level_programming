@@ -53,12 +53,6 @@ Checking too many arguments for area:
     TypeError: age must be an integer
 
 
-    >>> bg.integer_validator(“bool”, True)
-    Traceback (most recent call last):
-    ...
-    SyntaxError: invalid character in identifier
-
-
     >>> bg.integer_validator("age", {3, 4})
     Traceback (most recent call last):
     ...
@@ -80,7 +74,5 @@ Checking too many arguments for area:
     ...
     Exception: area() is not implemented
 
-    >>> bg.integer_validator(“age”, True)
-    Traceback (most recent call last):
-    ...
-    SyntaxError: invalid character in identifier
+    >>> bg.integer_validator("age", True)
+
