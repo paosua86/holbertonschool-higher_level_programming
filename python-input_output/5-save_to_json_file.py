@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-contains save_to_json_file fuction
+contains save_to_json_file function
 """
 
 import json

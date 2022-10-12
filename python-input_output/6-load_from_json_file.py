@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-contains load_from_json_file fuction
+contains load_from_json_file function
 """
 
 import json

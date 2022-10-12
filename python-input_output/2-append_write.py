@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-contains append_write fuction
+contains append_write function
 """
 
 
