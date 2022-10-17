@@ -81,7 +81,7 @@ class Rectangle(Base):
         for j in range(self.y):
             print()
         for i in range(self.height):
-            for l in range(self.x):
+            for le in range(self.x):
                 print(" ", end="")
             for k in range(self.width):
                 print("#", end="")
@@ -109,4 +109,3 @@ class Rectangle(Base):
                     self.x = a
                 elif i == 4:
                     self.y = a
-
