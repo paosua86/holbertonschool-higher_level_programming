@@ -3,6 +3,7 @@
 Contains the "Base" class
 """
 
+
 class Base:
     """Bse class"""
     __nb_objects = 0
