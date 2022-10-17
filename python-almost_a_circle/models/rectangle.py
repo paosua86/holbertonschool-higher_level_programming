@@ -78,7 +78,11 @@ class Rectangle(Base):
 
     def display(self):
         """prints the display"""
+        for j in range(self.y):
+            print()
         for i in range(self.height):
+            for l in range(self.x):
+                print(" ", end="")
             for k in range(self.width):
                 print("#", end="")
             print()
@@ -105,6 +109,4 @@ class Rectangle(Base):
                     self.x = a
                 elif i == 4:
                     self.y = a
-
-
 
