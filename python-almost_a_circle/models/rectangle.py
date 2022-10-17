@@ -2,6 +2,7 @@
 """
 Contains rectangle
 """
+from sys import argv
 from models.base import Base
 
 
@@ -81,3 +82,11 @@ class Rectangle(Base):
             for k in range(self.width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """string representation"""
+        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id,
+                                                                 self.__x,
+                                                                 self.__y,
+                                                                 self.__width,
+                                                                 self.__height)
