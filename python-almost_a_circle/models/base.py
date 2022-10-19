@@ -22,9 +22,7 @@ class Base:
         """ returns the JSON string representation"""
         if list_dictionaries is None:
             return "[]"
-        #aqui
-        else:
-            return json.dumps(list_dictionaries)
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -42,13 +40,26 @@ class Base:
             return []
         return json.loads(json_string)
 
-
+    @classmethod
     def create(cls, **dictionary):
         """creates a new object"""
         if cls.__name__ is "Rectangle":
-            dummy = cls(1,1)
+            dummy = cls(1, 1)
         elif cls.__name__ is "Square":
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """list of instances"""
+        filename = cls.__name__ + ".json"
+        if not filename:
+            return []
+        listj = []
+        with open(filename, 'r') as f:
+            listj = cls.from_json_string(f.read())
+            for i, e in enumerate(listj):
+                listj[i] = cls.create(**listj[i])
+        return listj
 
