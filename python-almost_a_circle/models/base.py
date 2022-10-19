@@ -54,7 +54,7 @@ class Base:
     def load_from_file(cls):
         """list of instances"""
         filename = cls.__name__ + ".json"
-        if not filename:
+        if not filename or filename is None:
             return []
         listj = []
         with open(filename, 'r') as f:
