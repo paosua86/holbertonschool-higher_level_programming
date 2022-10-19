@@ -62,4 +62,3 @@ class Base:
             for i, e in enumerate(listj):
                 listj[i] = cls.create(**listj[i])
         return listj
-
