@@ -2,6 +2,7 @@
 """
 Contains the "Base" class
 """
+from asyncio.proactor_events import _ProactorBaseWritePipeTransport
 import json
 
 
@@ -52,13 +53,14 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """list of instances"""
         filename = cls.__name__ + ".json"
-        if not filename or filename is None:
-            return []
         listj = []
-        with open(filename, 'r') as f:
-            listj = cls.from_json_string(f.read())
-            for i, e in enumerate(listj):
-                listj[i] = cls.create(**listj[i])
+        try:
+            with open(filename, 'r') as f:
+                listj = cls.from_json_string(f.read())
+            for i, e in enumerate(l):
+                listj[i] = cls.create(**l[i])
+        except:
+            pass
         return listj
+
