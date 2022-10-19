@@ -39,5 +39,5 @@ class Base:
     def from_json_string(json_string):
         """Update the class Base"""
         if json_string is None or not json_string:
-            return "[]"
+            return []
         return json.loads(json_string)
