@@ -13,7 +13,6 @@ class Square(Rectangle):
         """inherits from Rectangle"""
         super().__init__(size, size, x, y, id)
 
-
     @property
     def size(self):
         """size getter"""
@@ -21,7 +20,7 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
-        """set width"""
+        """set size"""
         self.width = value
         self.height = value
 
@@ -58,4 +57,3 @@ class Square(Rectangle):
         """returns the dictionary representation"""
         return {"x": self.x, "y": self.y, "id": self.id,
                 "size": self.width}
-
