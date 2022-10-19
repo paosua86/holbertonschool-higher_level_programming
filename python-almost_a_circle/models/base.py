@@ -37,5 +37,3 @@ class Base:
             list.append(cls.to_dictionary(i))
         with open(filename, "w") as f:
             f.write(cls.to_json_string(list))
-
-
