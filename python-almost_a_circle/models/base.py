@@ -53,6 +53,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """File to instances"""
         filename = cls.__name__ + ".json"
         listj = []
         try:
