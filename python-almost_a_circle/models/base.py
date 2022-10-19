@@ -2,7 +2,6 @@
 """
 Contains the "Base" class
 """
-from asyncio.proactor_events import _ProactorBaseWritePipeTransport
 import json
 
 
