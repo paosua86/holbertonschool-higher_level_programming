@@ -2,8 +2,6 @@
 """
 Contains the "Base" class
 """
-
-
 import json
 
 
@@ -17,16 +15,18 @@ class Base:
             self.id = id
         else:
             Base.__nb_objects += 1
-            self.id = self.__nb_objects
+            self.id = Base.__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
         """ returns the JSON string representation"""
         if list_dictionaries is None:
             return "[]"
-        return json.dumps(list_dictionaries)
+        #aqui
+        else:
+            return json.dumps(list_dictionaries)
 
-    @staticmethod
+    @classmethod
     def save_to_file(cls, list_objs):
         """writes the JSON string representation"""
         filename = cls.__name__ + ".json"
@@ -41,3 +41,14 @@ class Base:
         if json_string is None or not json_string:
             return []
         return json.loads(json_string)
+
+
+    def create(cls, **dictionary):
+        """creates a new object"""
+        if cls.__name__ is "Rectangle":
+            dummy = cls(1,1)
+        elif cls.__name__ is "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
+
