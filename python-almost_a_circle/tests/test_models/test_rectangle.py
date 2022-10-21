@@ -4,6 +4,8 @@
 
 import unittest
 from models.rectangle import Rectangle
+import json
+from models.base import Base
 
 class TestRectangle(unittest.TestCase):
     '''contains all test of class Rectangle'''
@@ -169,5 +171,25 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect.x, 3)
         self.assertEqual(rect.y, 4)
 
-    def test_rectangle_save_to_file_exists_none(self):
+    def test_save_to_file(self):
+        """test regular use of save_to_file"""
+        r1 = Rectangle(1, 1, 1, 1, 1)
+        r2 = Rectangle(2, 2, 2, 2, 2)
+        l = [r1, r2]
+        Rectangle.save_to_file(l)
+        with open("Rectangle.json", "r") as f:
+            ls = [r1.to_dictionary(), r2.to_dictionary()]
+            self.assertEqual(json.dumps(ls), f.read())
+
+    def test_stf_empty(self):
+        """test save_to_file with empty list"""
+        l = []
+        Rectangle.save_to_file(l)
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual("[]", f.read())
+
+    def test_stf_None(self):
+        """test save_to_file with None"""
         Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual("[]", f.read())
