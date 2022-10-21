@@ -181,3 +181,10 @@ class TestRectangle(unittest.TestCase):
         with redirect_stdout(input_string):
             r.display()
         self.assertEqual(res_str, input_string.getvalue())
+
+        r.x = 1
+        res_str = " ##\n ##\n"
+        input_string = io.StringIO()
+        with redirect_stdout(input_string):
+            r.display()
+        self.assertEqual(res_str, input_string.getvalue())
