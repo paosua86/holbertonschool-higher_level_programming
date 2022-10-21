@@ -1,19 +1,32 @@
 #!/usr/bin/python3
-'''
-test_models/test_rectangle module
-test if the class rectangle is functional
-try test with python3 -m unittest discover test at
-0x0C-python-almost_a_circle directory
-'''
-
+"""tests"""
 
 import unittest
 from models.rectangle import Rectangle
 
 class TestRectangle(unittest.TestCase):
-    '''contains all test of class Rectangle'''
+    """test of class Rectangle"""
+
+    def test_rectangle_creation_1(self):
+        rect = Rectangle(1, 2)
+        self.assertEqual(rect.width, 1)
+        self.assertEqual(rect.height, 2)
+
+    def test_rectangle_creation_2(self):
+        rect = Rectangle(1, 2, 3)
+        self.assertEqual(rect.width, 1)
+        self.assertEqual(rect.height, 2)
+        self.assertEqual(rect.x, 3)
+
+    def test_rectangle_creation_3(self):
+        rect = Rectangle(1, 2, 3, 4)
+        self.assertEqual(rect.width, 1)
+        self.assertEqual(rect.height, 2)
+        self.assertEqual(rect.x, 3)
+        self.assertEqual(rect.y, 4)
 
     def test_type(self):
+        self.assertRaises(TypeError, Rectangle, height = '2')
         self.assertRaises(TypeError, Rectangle, width = '2')
         self.assertRaises(TypeError, Rectangle, width = float('NaN'))
         self.assertRaises(TypeError, Rectangle, width = float('inf'))
