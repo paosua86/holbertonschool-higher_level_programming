@@ -25,7 +25,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect.x, 3)
         self.assertEqual(rect.y, 4)
 
-    def test_rectangle_creation_3(self):
+    def test_rectangle_creation_4(self):
         rect = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(rect.width, 1)
         self.assertEqual(rect.height, 2)
@@ -33,8 +33,9 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect.y, 4)
 
     def test_type(self):
+        self.assertRaises(TypeError, Rectangle, "1", 2)
         self.assertRaises(TypeError, Rectangle, height = "1")
-        self.assertRaises(TypeError, Rectangle, width = '2')
+        self.assertRaises(TypeError, Rectangle, width = "2")
         self.assertRaises(TypeError, Rectangle, width = float('NaN'))
         self.assertRaises(TypeError, Rectangle, width = float('inf'))
         self.assertRaises(TypeError, Rectangle, 1, height = 'abc')
@@ -54,3 +55,19 @@ class TestRectangle(unittest.TestCase):
     def test_area(self):
         rect_1 = Rectangle(6, 2)
         self.assertEqual(rect_1.area(), 12)
+
+    def test_rectangle_representation(self):
+        rect_repr = str(Rectangle(1, 2, 3, 4, 5))
+        result = '[Rectangle] (5) 3/4 - 1/2'
+        self.assertEqual(rect_repr, result)
+
+    def test_rectangle_to_dictionary_exists(self):
+        rect_dict = Rectangle(1, 2, 3, 4, 5).to_dictionary()
+        result = {
+            'width': 1,
+            'height': 2,
+            'x': 3,
+            'y': 4,
+            'id': 5
+        }
+        self.assertEqual(rect_dict, result)
