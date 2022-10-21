@@ -124,9 +124,6 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(square.x, 2)
         self.assertEqual(square.y, 3)
 
-    #def test_Square_create_exists_1(self):
-    #    with self.assertRaises(TypeError):
-    #        Square.create(**{'id': 89})
 
     def test_Square_create_exists_2(self):
         square = Square.create(**{'id': 89, 'size': 1})
@@ -165,7 +162,7 @@ class TestSquare(unittest.TestCase):
 
         with open('Square.json', 'r') as f:
             self.assertEqual(
-                f.read(), '[{"x": 0, "y": 0, "id": 16, "size": 1}]')
+                f.read(), '[{"x": 0, "y": 0, "id": 17, "size": 1}]')
         os.remove('Square.json')
 
     def test_Square_load_from_file_not_exists(self):

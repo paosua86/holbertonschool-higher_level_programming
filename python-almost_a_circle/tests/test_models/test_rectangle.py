@@ -5,7 +5,8 @@
 import unittest
 from models.rectangle import Rectangle
 from models.base import Base
-
+import io
+from contextlib import redirect_stdout
 
 
 class TestRectangle(unittest.TestCase):
@@ -172,3 +173,11 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect.x, 3)
         self.assertEqual(rect.y, 4)
 
+    def test_basic_display(self):
+        """Test display without x and y"""
+        r = Rectangle(2, 2)
+        input_string = io.StringIO()
+        res_str = "##\n##\n"
+        with redirect_stdout(input_string):
+            r.display()
+        self.assertEqual(res_str, input_string.getvalue())
