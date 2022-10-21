@@ -6,6 +6,7 @@ import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
+import os
 
 
 class TestBase(unittest.TestCase):
@@ -112,21 +113,6 @@ class TestRectangle(unittest.TestCase):
         result = '[Rectangle] (5) 3/4 - 1/2'
         self.assertEqual(rect_repr, result)
 
-    def test_rectangle_display_without_x_and_y(self):
-        with patch('sys.stdout', new=StringIO()) as out:
-            Rectangle(2, 2).display()
-            self.assertEqual(out.getvalue(), '##\n##\n')
-
-    def test_rectangle_display_without_y(self):
-        with patch('sys.stdout', new=StringIO()) as out:
-            Rectangle(2, 2, 1).display()
-            self.assertEqual(out.getvalue(), ' ##\n ##\n')
-
-    def test_rectangle_display_exists(self):
-        with patch('sys.stdout', new=StringIO()) as out:
-            Rectangle(2, 2, 1, 1).display()
-            self.assertEqual(out.getvalue(), '\n ##\n ##\n')
-
     def test_rectangle_to_dictionary_exists(self):
         rect_dict = Rectangle(1, 2, 3, 4, 5).to_dictionary()
         result = {
@@ -207,14 +193,6 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect.height, 2)
         self.assertEqual(rect.x, 3)
         self.assertEqual(rect.y, 4)
-
-    def test_rectangle_create_exists_1(self):
-        with self.assertRaises(TypeError):
-            Rectangle.create(**{'id': 89})
-
-    def test_rectangle_create_exists_2(self):
-        with self.assertRaises(TypeError):
-            Rectangle.create(**{'id': 89, 'width': 1})
 
     def test_rectangle_create_exists_3(self):
         rect = Rectangle.create(**{'id': 89, 'width': 1, 'height': 2})
