@@ -38,3 +38,4 @@ class TestBase(unittest.TestCase):
 
     def test_from_json_string_exists(self):
         self.assertEqual(Base.from_json_string('[{ "id": 89 }]'), [{'id': 89}])
+
