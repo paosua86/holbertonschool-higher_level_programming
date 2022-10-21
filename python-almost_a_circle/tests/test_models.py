@@ -1,12 +1,17 @@
 #!/usr/bin/python3
 """test"""
-
 import unittest
-from models import Rectangle
+from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 class Base_Test(unittest.TestCase):
     """test all"""
 
+
+    def test(self):
+        """test"""
+        Base()
 
     def test0(self):
         """type error"""
