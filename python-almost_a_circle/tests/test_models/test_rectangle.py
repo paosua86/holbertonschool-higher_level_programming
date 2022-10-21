@@ -25,8 +25,15 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect.x, 3)
         self.assertEqual(rect.y, 4)
 
+    def test_rectangle_creation_3(self):
+        rect = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(rect.width, 1)
+        self.assertEqual(rect.height, 2)
+        self.assertEqual(rect.x, 3)
+        self.assertEqual(rect.y, 4)
+
     def test_type(self):
-        self.assertRaises(TypeError, Rectangle, height = '2')
+        self.assertRaises(TypeError, Rectangle, height = "1")
         self.assertRaises(TypeError, Rectangle, width = '2')
         self.assertRaises(TypeError, Rectangle, width = float('NaN'))
         self.assertRaises(TypeError, Rectangle, width = float('inf'))
@@ -42,6 +49,7 @@ class TestRectangle(unittest.TestCase):
         self.assertRaises(ValueError, Rectangle, 1, -565)
         self.assertRaises(ValueError, Rectangle, 1, 1, -755)
         self.assertRaises(ValueError, Rectangle, 1, 1, -2)
+        self.assertRaises(ValueError, Rectangle, 1, 2, 3, -4)
 
     def test_area(self):
         rect_1 = Rectangle(6, 2)
