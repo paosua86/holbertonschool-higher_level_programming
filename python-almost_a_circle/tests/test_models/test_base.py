@@ -1,12 +1,5 @@
 #!/usr/bin/python3
-'''
-test_models/test_base module
-test if the class Base is functional
-try test with python3 -m unittest discover test at
-0x0C-python-almost_a_circle directory
-'''
-
-
+"""test"""
 import unittest
 from models.base import Base
 
