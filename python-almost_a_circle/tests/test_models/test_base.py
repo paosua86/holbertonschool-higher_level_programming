@@ -6,7 +6,7 @@ from models.square import Square
 import os
 
 
-class TestBase(unittest.TestCase):
+class Test_Base(unittest.TestCase):
     def test_assigning_automatically_id(self):
         self.assertEqual(Base().id, 1)
 
@@ -35,7 +35,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(Base.from_json_string('[{ "id": 89 }]'), [{'id': 89}])
 
 
-class TestRectangle(unittest.TestCase):
+class Test_Rectangle(unittest.TestCase):
     def test_rectangle_creation_1(self):
         rect = Rectangle(1, 2)
         self.assertEqual(rect.width, 1)
