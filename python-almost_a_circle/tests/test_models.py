@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-
-"""tests"""
-from io import StringIO
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
