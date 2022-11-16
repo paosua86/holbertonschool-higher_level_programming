@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     new = State(name='Louisiana')
     session.add(new)
-    #to save it in db
+    # to save it in db
     session.commit()
 
     for state in session.query(State).filter_by(name="Louisiana").all():
