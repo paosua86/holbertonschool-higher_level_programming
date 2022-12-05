@@ -6,6 +6,6 @@ if (array.length < 1) {
     console.log(0);
   } else {
     const list_string = array.map(Number);
-    const list = list_string.sort();
-    console.log(list.reverse()[1]);
+    const list = list_string.sort(function(a,b){return b-a})[2];
+    console.log(list);
   }
