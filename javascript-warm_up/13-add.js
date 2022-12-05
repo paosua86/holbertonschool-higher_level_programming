@@ -2,5 +2,5 @@
 // returns the addition of 2 integer
 
 exports.add = function (a, b) {
-    return parseInt(a) + parseInt(b);
-  }
+  return parseInt(a) + parseInt(b);
+};
