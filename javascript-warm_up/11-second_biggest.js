@@ -5,7 +5,7 @@ const array = process.argv.slice(1, process.argv.length);
 if (array.length < 1) {
     console.log(0);
   } else {
-    var list_string = array.map(Number);
+    const list_string = array.map(Number);
     const list = list_string.sort();
     console.log(list.reverse()[1]);
   }
