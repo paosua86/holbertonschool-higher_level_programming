@@ -3,7 +3,7 @@
 // movie where the episode number matches a given integer
 const request = require('request');
 const { argv } = require('process');
-const url = `https://swapi-api.hbtn.io/api/films/${argv[2]}`
+const url = `https://swapi-api.hbtn.io/api/films/${argv[2]}`;
 
 request(url, function (error, response, body) {
   if (error) {
