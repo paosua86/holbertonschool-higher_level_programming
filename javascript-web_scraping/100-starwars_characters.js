@@ -10,7 +10,11 @@ request(url, function (error, response, body) {
     const characters = JSON.parse(body).characters;
     for (const character of characters) {
       request(character, function (error, response, body) {
-        console.log(JSON.parse(body).name);
+        if (error) {
+          console.log(error);
+        } else {
+          console.log(JSON.parse(body).name);
+        }
       });
     }
   }
