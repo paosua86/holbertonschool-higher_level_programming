@@ -1,15 +1,21 @@
 #!/usr/bin/node
-// Write a script that prints the title of a Star Wars
-// movie where the episode number matches a given integer
+// Write a script that prints the number of movies where the character “Wedge Antilles” is present.
 const request = require('request');
 const { argv } = require('process');
-const url = `https://swapi-api.hbtn.io/api/films/${argv[2]}`;
 
-request(url, function (error, response, body) {
+request(argv[2], function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
     const obtained = JSON.parse(body);
-    console.log(`${obtained.title}`);
+    let times = 0;
+    for (const result of obtained.results) {
+      for (const char of result.characters) {
+        if (char.includes('/18/')) {
+          times++;
+        }
+      }
+    }
+    console.log(times);
   }
 });
